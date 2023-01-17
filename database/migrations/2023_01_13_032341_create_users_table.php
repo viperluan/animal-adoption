@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('cpf')->unique();
             $table->date('birthday');
             $table->string('image')->nullable();
-            $table->foreignUuid('address_id')->references('id')->on('adresses');
-            $table->rememberToken();
+            $table->foreignUuid('address_id')->nullable()->references('id')->on('adresses');
+            $table->rememberToken()->nullable();
             $table->timestampTz('email_verified_at')->nullable();
             $table->timestampsTz();
         });
