@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('number');
             $table->string('zip_code');
             $table->string('city');
+            $table->string('complement')->nullable();
             $table->foreignUuid('state_id')->references('id')->on('states');
             $table->foreignUuid('country_id')->references('id')->on('countries');
             $table->timestampsTz();
