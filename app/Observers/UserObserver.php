@@ -8,6 +8,17 @@ use Ramsey\Uuid\Uuid;
 class UserObserver
 {
     /**
+     * Handle the User "creating" event.
+     *
+     * @param  \App\Models\User  $user
+     * @return void
+     */
+    public function creating(User $user)
+    {
+        $user->id = Uuid::uuid4();
+    }
+
+    /**
      * Handle the User "created" event.
      *
      * @param  \App\Models\User  $user
@@ -16,11 +27,6 @@ class UserObserver
     public function created(User $user)
     {
         //
-    }
-
-    public function creating(User $user)
-    {
-        $user->id = Uuid::uuid4();
     }
 
     /**
