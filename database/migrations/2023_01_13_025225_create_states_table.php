@@ -17,7 +17,7 @@ return new class extends Migration
             $table->uuid('id')->primary()->unique();
             $table->string('name');
             $table->foreignUuid('country_id')->references('id')->on('countries');
-            $table->string('area_code');
+            $table->string('area_code')->nullable();
             $table->timestampsTz();
         });
     }
