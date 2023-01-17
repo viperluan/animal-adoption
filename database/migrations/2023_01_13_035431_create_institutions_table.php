@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('description')->nullable();
             $table->foreignUuid('address_id')->references('id')->on('adresses');
+            $table->rememberToken();
             $table->timestampTz('email_verified_at')->nullable();
             $table->timestampsTz();
         });
