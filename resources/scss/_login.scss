@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #f2f2f2;
+
+    .container {
+        height: 100%;
+    }
+
+    .signup-container,
+    .signin-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+
+            button {
+                margin-top: 10px;
+                padding: 5px;
+                cursor: pointer;
+            }
+        }
+
+        .links-container {
+            padding: 10px;
+
+            p {
+                margin-bottom: 5px;
+            }
+        }
+
+        .input-error-message {
+            color: red;
+            margin-bottom: 10px;
+        }
+    }
+}
