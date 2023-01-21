@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 include "SignInRoutes.php";
 include "SignUpRoutes.php";
 include "DashboardRoutes.php";
+include "EmailVerificationRoutes.php";
 
 /*
 |--------------------------------------------------------------------------
