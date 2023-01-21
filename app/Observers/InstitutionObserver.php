@@ -3,6 +3,7 @@
 namespace App\Observers;
 
 use App\Models\Institution;
+use Illuminate\Support\Facades\Hash;
 use Ramsey\Uuid\Uuid;
 
 class InstitutionObserver
@@ -16,6 +17,7 @@ class InstitutionObserver
     public function creating(Institution $institution)
     {
         $institution->id = Uuid::uuid4();
+        $institution->password = Hash::make($institution->password);
     }
 
     /**
