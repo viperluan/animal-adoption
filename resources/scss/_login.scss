@@ -25,6 +25,10 @@ body {
         align-items: center;
         justify-content: center;
 
+        h1 {
+            margin-bottom: 20px;
+        }
+
         form {
             display: flex;
             flex-direction: column;
