@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'institution' => [
+            'driver' => 'session',
+            'provider' => 'institutions',
+        ],
     ],
 
     /*
@@ -63,6 +67,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'institutions' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Institution::class,
         ],
 
         // 'users' => [
@@ -89,6 +97,12 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'institutions' => [
+            'provider' => 'institutions',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
