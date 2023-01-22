@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="verify-email-container">
-        <h1>Verifique sua caixa de emails, enviamos um link para confirmar seu cadastro.</h1>
+        <h1>Verifique sua caixa de mensagens, enviamos um link para confirmar seu cadastro.</h1>
         <form action="/email/verification-notification" method="POST">
             @csrf
 
