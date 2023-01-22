@@ -2,10 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-include "SignInRoutes.php";
-include "SignUpRoutes.php";
-include "DashboardRoutes.php";
-include "EmailVerificationRoutes.php";
+include "email/email-routes.php";
+include "institution/institution-routes.php";
+include "user/user-routes.php";
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +18,5 @@ include "EmailVerificationRoutes.php";
 */
 
 Route::get('/', function () {
-    return redirect('/dashboard');
-});
+    return view('home.home');
+})->name('home');
