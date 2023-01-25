@@ -1,0 +1,42 @@
+services:
+    web:
+        image: nginx:latest
+        container_name: nginx
+        restart: always
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - .:/www
+            - ./nginx/site.conf:/etc/nginx/conf.d/site.conf
+            - ./nginx/log:/var/log/nginx
+        networks:
+            - app-network
+    php:
+        build: .
+        container_name: php
+        restart: always
+        volumes:
+            - .:/www
+        networks:
+            - app-network
+        pull_policy: build
+    db:
+        container_name: animal-adoption-db
+        image: postgres
+        restart: unless-stopped
+        environment:
+            POSTGRES_USER: animal-adoption
+            POSTGRES_PASSWORD: animal-adoption
+            POSTGRES_DB: animal-adoption
+        ports:
+            - 5432:5432
+        volumes:
+            - ./pgsql-data:/var/lib/postgresql/data
+        networks:
+            - app-network
+volumes:
+    pgsql-data:
+networks:
+    app-network:
+        driver: bridge
