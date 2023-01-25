@@ -4,6 +4,10 @@
 
 @section('content')
     <div class="institution-dashboard-page">
+        <a href="/">
+            <button>Voltar</button>
+        </a>
+
         @auth
             <p>Seja bem vindo, {{ auth()->user()->name }}!</p>
         @endauth
