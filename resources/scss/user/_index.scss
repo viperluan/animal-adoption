@@ -1,4 +1,3 @@
-@use "user-login-page";
-@use "user-register-page";
-@use "user-dashboard-page";
-@use "user-dashboard-header";
+@import "dashboard/index";
+@import "login/index";
+@import "register/index";

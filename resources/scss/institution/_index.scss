@@ -1,4 +1,3 @@
-@use "institution-dashboard-page";
-@use "institution-login-page";
-@use "institution-register-page";
-@use "institution-dashboard-header";
+@import "login/index";
+@import "dashboard/index";
+@import "register/index";

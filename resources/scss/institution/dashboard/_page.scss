@@ -1,0 +1,35 @@
+.institution-dashboard-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    background-color: #f2f2f2;
+
+    p {
+        font-size: 40px;
+    }
+
+    .institution-dashboard-main {
+        width: 100%;
+        height: calc(100% - 50px);
+        position: absolute;
+        top: 50px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        // background-color: blue;
+
+        .institution-dashboard-aside {
+            align-self: flex-start;
+            padding: 20px;
+
+            ul li + li {
+                margin: 10px 0 0;
+            }
+        }
+    }
+}
