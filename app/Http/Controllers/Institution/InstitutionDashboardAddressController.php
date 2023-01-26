@@ -24,7 +24,15 @@ class InstitutionDashboardAddressController extends Controller
      */
     public function create()
     {
-        return view('institution.dashboard.address');
+        $data = [];
+        $institution = auth()->guard('institution')->user()->address;
+
+        if (isset($institution)) {
+            $address = $institution->with(['state', 'country'])->get()->toArray();
+            $data['address'] = $address[0];
+        }
+
+        return view('institution.dashboard.address', $data);
     }
 
     /**

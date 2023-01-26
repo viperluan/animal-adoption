@@ -12,13 +12,14 @@ class Address extends Model
     protected $keyType = 'string';
     protected $guarded = [];
     protected $table = 'adresses';
+    protected $hidden = ['id', 'state_id', 'country_id', 'created_at', 'updated_at'];
 
     /**
      * Get the country for the address.
      */
     public function country()
     {
-        $this->belongsTo(Country::class);
+        return $this->belongsTo(Country::class);
     }
 
     /**
@@ -26,7 +27,7 @@ class Address extends Model
      */
     public function state()
     {
-        $this->belongsTo(State::class);
+        return $this->belongsTo(State::class);
     }
 
     /**
@@ -34,7 +35,7 @@ class Address extends Model
      */
     public function user()
     {
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 
     /**
@@ -42,6 +43,6 @@ class Address extends Model
      */
     public function institution()
     {
-        $this->belongsTo(Institution::class);
+        return $this->belongsTo(Institution::class);
     }
 }

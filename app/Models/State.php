@@ -11,6 +11,7 @@ class State extends Model
 
     protected $keyType = 'string';
     protected $guarded = [];
+    protected $hidden = ['id', 'country_id', 'created_at', 'updated_at'];
 
     /**
      * Get the country for the state.

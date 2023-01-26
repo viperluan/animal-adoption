@@ -28,9 +28,16 @@
                 </ul>
             </aside>
 
-            @auth
-                <p>Endereço da instituição</p>
-            @endauth
+            @isset($address)
+                <p>Endereço: {{ $address['street'] }}</p>
+                <p>Bairro: {{ $address['district'] }}</p>
+                <p>Número: {{ $address['number'] }}</p>
+                <p>CEP: {{ $address['zip_code'] }}</p>
+                <p>Complemento: {{ $address['complement'] }}</p>
+                <p>Cidade: {{ $address['city'] }}</p>
+                <p>Estado: {{ $address['state']['name'] }}</p>
+                <p>País: {{ $address['country']['name'] }}</p>
+            @endisset
         </main>
     </div>
 
