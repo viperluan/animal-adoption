@@ -22,6 +22,12 @@ class Authenticate extends Middleware
             if (str_contains($request->path(), 'institution')) {
                 return route('institution.login');
             }
+
+            /**
+             * In case the user/institution try to access any route
+             * without autenthicated, redirect to home.
+             */
+            return route('home');
         }
     }
 }
