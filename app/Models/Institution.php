@@ -15,4 +15,13 @@ class Institution extends Authenticatable implements MustVerifyEmail
 
     protected $keyType = 'string';
     protected $guarded = [];
+    protected $hidden = ['id', 'password'];
+
+    /**
+     * Get the adresse for the institution.
+     */
+    public function address()
+    {
+        return $this->belongsTo(Address::class);
+    }
 }
