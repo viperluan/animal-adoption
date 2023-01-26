@@ -11,11 +11,11 @@
         @guest('web')
             @guest('institution')
                 <a href="/user/login">
-                    <button>Área do usuário</button>
+                    <button class="area-button">Área do usuário</button>
                 </a>
 
                 <a href="/institution/login">
-                    <button>Área da instituição</button>
+                    <button class="area-button">Área da instituição</button>
                 </a>
             @endguest
         @endguest
