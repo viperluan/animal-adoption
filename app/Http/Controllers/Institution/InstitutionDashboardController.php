@@ -24,7 +24,7 @@ class InstitutionDashboardController extends Controller
      */
     public function create()
     {
-        return view('institution.institution-dashboard');
+        return view('institution.dashboard');
     }
 
     /**

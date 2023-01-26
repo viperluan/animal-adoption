@@ -27,7 +27,7 @@ class InstitutionRegisterController extends Controller
      */
     public function create()
     {
-        return view('institution.institution-register');
+        return view('institution.register');
     }
 
     /**

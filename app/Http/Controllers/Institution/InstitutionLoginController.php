@@ -26,7 +26,7 @@ class InstitutionLoginController extends Controller
      */
     public function create()
     {
-        return view('institution.institution-login');
+        return view('institution.login');
     }
 
     /**

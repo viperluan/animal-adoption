@@ -24,7 +24,7 @@ class UserDashboardController extends Controller
      */
     public function create()
     {
-        return view('user.user-dashboard');
+        return view('user.dashboard');
     }
 
     /**

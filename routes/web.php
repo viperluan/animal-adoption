@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-include "email/email-routes.php";
-include "institution/institution-routes.php";
-include "user/user-routes.php";
+include "email/routes.php";
+include "institution/routes.php";
+include "user/routes.php";
 
 /*
 |--------------------------------------------------------------------------

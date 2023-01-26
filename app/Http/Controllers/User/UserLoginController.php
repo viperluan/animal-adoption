@@ -47,7 +47,7 @@ class UserLoginController extends Controller
      */
     public function create()
     {
-        return view('user.user-login');
+        return view('user.login');
     }
 
     /**

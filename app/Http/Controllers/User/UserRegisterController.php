@@ -27,7 +27,7 @@ class UserRegisterController extends Controller
      */
     public function create()
     {
-        return view('user.user-register');
+        return view('user.register');
     }
 
     /**
